@@ -1,0 +1,63 @@
+<div class="row no-gutters">
+  <div class="col-md-7">
+    <div class="contact-wrap w-100 p-md-5 p-4">
+      <h3 class="mb-4">Modifier votre compte</h3>
+      <form [formGroup]="registerForm" class="contactForm" >
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label class="label" >Nom</label>
+              <input type="text" class="form-control" name="nom"  placeholder="Nom"  formControlName="nom" >
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label class="label" for="email">Prenom</label>
+              <input type="email" class="form-control" name="prenom"  placeholder="Prenom" formControlName="prenom" >
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label class="label" for="email">Email</label>
+              <input type="email" class="form-control" name="email" id="email" placeholder="Email" formControlName="email"  >
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="form-group">
+              <label class="label" >Date de Naissance</label>
+              <input type="date" class="form-control" name="datenaissance" placeholder="Date de Naissance" formControlName="dateNaissance">
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="form-group">
+              <label class="label" >Cin</label>
+              <input type="number" class="form-control" placeholder="cin" formControlName="cin">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label class="label" >numero de telephone</label>
+              <input type="number" class="form-control" name="numero"  placeholder="numero de telephone" formControlName="numero">
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group">
+              <label class="label" >Mot de Passe</label>
+              <input type="password" class="form-control" name="password"  placeholder="Mot de Passe" formControlName="password">
+            </div>
+          </div>
+
+
+          <div class="col-md-12">
+            <div class="form-group">
+              <input type="submit" value="Modifier" [disabled]="registerForm.invalid" (click)="onSubmit()"  class="btn btn-primary">
+              <div class="submitting"></div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

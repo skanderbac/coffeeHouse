@@ -1,0 +1,37 @@
+
+<input type="text" name="recherche" [(ngModel)]="recherche" class="form-control" placeholder="Recherche ...">
+<table class="table">
+  <th>
+    id
+  </th>
+  <th>
+    nom
+  </th>
+  <th>
+    prenom
+  </th>
+  <th>
+    date de naissance
+  </th>
+  <th>
+    email
+  </th>
+  <th>
+    numero
+  </th>
+  <th>
+    cin
+  </th>
+  <tbody *ngFor="let user of listUser; let i= index">
+  <tr *ngIf="user.nom==recherche || user.prenom==recherche || user.email==recherche || recherche==''">
+    <td>{{user.id}}</td>
+    <td>{{user.nom}}</td>
+    <td>{{user.prenom}}</td>
+    <td>{{user.dateNaissance}}</td>
+    <td>{{user.email}}</td>
+    <td>{{user.numero}}</td>
+    <td>{{user.cin}}</td>
+    <td><button class="btn btn-success" (click)="delete(user.id)" >Delete</button></td>
+  </tr>
+  </tbody>
+</table>

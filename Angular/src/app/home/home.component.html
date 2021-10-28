@@ -1,0 +1,27 @@
+
+<section>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <br>
+        <h3 class="media-heading">{{user.nom}} {{user.prenom}}</h3>
+        <br>
+        <span><strong>Email: </strong></span>
+        <span class="label label-warning">{{user.email}}</span>
+        <br>
+        <span><strong>Date de naissance: </strong></span>
+        <span class="label label-warning">{{user.dateNaissance}}</span>
+        <br>
+        <span><strong>Numéro de téléphone: </strong></span>
+        <span class="label label-warning">{{user.numero}}</span>
+        <br>
+
+      </div>
+      <div class="modal-footer">
+        <div class="span3 well">
+          <a routerLink="../update/{{user.id}}">Cliquez ici pour modifier votre compte</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

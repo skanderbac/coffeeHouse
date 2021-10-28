@@ -1,0 +1,84 @@
+<div class="row no-gutters">
+  <div class="col-md-7">
+    <div class="contact-wrap w-100 p-md-5 p-4">
+      <h3 class="mb-4">S'inscrire dans notre site</h3>
+      <form #f="ngForm" class="contactForm" >
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label class="label" >Nom</label>
+              <input type="text" class="form-control" name="nom"  placeholder="Nom" [(ngModel)]="user.nom" #n="ngModel" required>
+              <div class="alert alert-danger" *ngIf="n.invalid && n.touched">
+                nom est obligatoire!
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label class="label" for="email">Prenom</label>
+              <input type="email" class="form-control" name="prenom"  placeholder="Prenom" [(ngModel)]="user.prenom" #p="ngModel" required>
+              <div class="alert alert-danger" *ngIf="p.invalid && p.touched">
+                prenom est obligatoire!
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label class="label" for="email">Email</label>
+              <input type="email" class="form-control" name="email" id="email" placeholder="Email" [(ngModel)]="user.email" #em="ngModel" required>
+              <div class="alert alert-danger" *ngIf="em.invalid && em.touched">
+                email est obligatoire!
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="form-group">
+              <label class="label" >Date de Naissance</label>
+              <input type="date" class="form-control" name="datenaissance" placeholder="Date de Naissance" [(ngModel)]="user.dateNaissance" #dn="ngModel" required>
+              <div class="alert alert-danger" *ngIf="dn.invalid && dn.touched">
+                La date de naissance est obligatoire!
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+          <div class="form-group">
+            <label class="label" >Cin</label>
+            <input type="number" class="form-control" name="cin" placeholder="cin" [(ngModel)]="user.cin" #cin="ngModel" required>
+            <div class="alert alert-danger" *ngIf="cin.invalid && cin.touched">
+              La date de naissance est obligatoire!
+            </div>
+          </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label class="label" >numero de telephone</label>
+              <input type="number" class="form-control" name="numero" [(ngModel)]="user.numero" #num="ngModel" placeholder="numero de telephone" required minlength="8">
+              <div class="alert alert-danger" *ngIf="num.invalid && num.touched">
+                <div *ngIf="num.errors.minlength">numero doit etre composé par 8 chiffres!</div>
+                <div *ngIf="num.errors.required">Le numero est obligatoire!</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group">
+              <label class="label" >Mot de Passe</label>
+              <input type="password" class="form-control" name="password" [(ngModel)]="user.password" #mdp="ngModel" placeholder="Mot de Passe" required minlength="10">
+              <div class="alert alert-danger" *ngIf="mdp.invalid && mdp.touched">
+                <div *ngIf="mdp.errors.minlength">Le mot de passe doit etre composé par 10 caractéres!</div>
+                <div *ngIf="mdp.errors.required">Le Mot de passe est obligatoire!</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group">
+              <input type="submit" value="S'inscrire" name="inscrire" [disabled]="f.invalid" (click)="save()" class="btn btn-primary">
+              <div class="submitting"></div>
+            </div>
+          </div>
+        </div>
+      </form>
+      <a routerLink="../login">Vous avez déja un comte?</a>
+    </div>
+  </div>
+</div>

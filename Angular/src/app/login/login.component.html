@@ -1,0 +1,39 @@
+<div class="col-md-11">
+    <h1 class="mb-4">Sign In </h1>
+    <div class="col-md-12">
+      <form  class="appointment" >
+        <div class="row">
+          <div class="col-md-12">
+            <div class="form-group">
+              <div class="form-field">
+                <div class="select-wrap">
+                  <input type="text" class="form-control" placeholder="Votre Email"
+                         name="email" [(ngModel)]="email">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group">
+              <div class="form-field">
+                <div class="select-wrap">
+                  <input type="password" class="form-control" placeholder="Votre Mot de passe"
+                         name="mot_passe" [(ngModel)]="password">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div *ngIf="islogin" class="alert alert-danger">
+            email ou mot de passe incorrectes!
+          </div>
+          <div class="col-md-12">
+            <div class="form-group">
+              <input type="submit" value="Connecter" (click)="connecter()" class="btn btn-primary py-3 px-4"
+                     name="submit">
+            </div>
+          </div>
+        </div>
+      </form>
+      <a routerLink="../register">Créer un nouveau compte</a>
+    </div>
+  </div>
