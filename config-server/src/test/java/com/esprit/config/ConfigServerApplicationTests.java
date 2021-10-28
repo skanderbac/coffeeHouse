@@ -1,10 +1,10 @@
-package com.esprit.candidates;
+package com.esprit.config;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class CandidateMsApplicationTests {
+class ConfigServerApplicationTests {
 
 	@Test
 	void contextLoads() {
