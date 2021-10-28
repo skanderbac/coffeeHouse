@@ -21,9 +21,27 @@
           <p>
             {{c.description}}.
           </p>
+          <input type="submit" class="btn btn-danger" value="delete" name="delete" (click)="delete(c)">
         </div>
       </div>
 
     </div>
   </div>
 </section>
+<br>
+
+<form>
+  <div class="form-group">
+    <label>nom</label>
+    <input name="nom" [(ngModel)]="coff.nom">
+  </div>
+  <div class="form-group">
+    <label>prix</label>
+    <input name="prix" [(ngModel)]="coff.prix">
+  </div>
+  <div class="form-group">
+    <label>description</label>
+    <input name="description" [(ngModel)]="coff.description">
+  </div>
+  <input type="submit" class="btn btn-info" value="add" name="add" (click)="add()">
+</form>

@@ -24,7 +24,7 @@ public class CoffeeController {
 	//@CrossOrigin(origins ="*")
 	@GetMapping("/allCoffee")
 	@ResponseBody
-	public List<Coffee> getUsers(){
+	public List<Coffee> getCoffee(){
 		List<Coffee> l=achatService.retrieveAllCoffee();
 		return l;
 	}
